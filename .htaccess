@@ -5,5 +5,5 @@ RewriteBase /
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /dns/index.php [L]
+RewriteRule . /dns/index.php [L]  # ここを書き換えてください。
 </IfModule>
