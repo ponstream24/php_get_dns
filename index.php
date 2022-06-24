@@ -7,7 +7,7 @@ header('Content-Type: application/json; charset=UTF-8');
 $request_uri = $_SERVER["REQUEST_URI"];
 
 // ここのURL 例: "/dns/"
-$url = "/";
+$url = "/dns/";
 
 // ドメインの解析
 $domain = substr($request_uri, mb_strlen($url));
