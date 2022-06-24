@@ -75,14 +75,14 @@
 </table>
  
 > 参考文献 https://www.php.net/manual/ja/function.dns-get-record.php
- <br>
- ## 解説
- このシステムは、PHPを使用しており、[dns_get_record()](https://www.php.net/manual/ja/function.dns-get-record.php) を使用しております。
+
+## 解説
+このシステムは、PHPを使用しており、[dns_get_record()](https://www.php.net/manual/ja/function.dns-get-record.php) を使用しております。
 ```php
 # 使用例
 dns_get_record("ドメイン", $type);
 ```
-<br>
+
 ## 注意点
 このソースを使用する際は、必ず `.htaccess`も設置してください。
 その際は、8行目のパスを書き換えてください。
