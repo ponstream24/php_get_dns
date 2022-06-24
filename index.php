@@ -22,6 +22,7 @@ if( !(checkdnsrr($domain, "NS")) ){
     $arr["message"] = "Not Found Domain";
     $arr["errors"]["type"] = "UnKnown Domain";
     $arr["errors"]["message"] = "存在しないドメインです。(A domain that does not exist.)";
+    $arr["errors"]["domain"] = $domain;
 
     // 出力
     print json_encode($arr, JSON_PRETTY_PRINT);
