@@ -36,6 +36,9 @@ http_response_code(200);
 // IPv4アドレスリソースレコードを取得
 $dns_a = dns_get_record($domain, DNS_A);
 
+// MXコードを取得
+$dns_mx = dns_get_record($domain, DNS_MX);
+
 // エイリアス(Canonical Name)リソースレコードを取得
 $dns_cname = dns_get_record($domain, DNS_CNAME);
 
@@ -82,7 +85,8 @@ $dns = [
     $dns_aaaa,
     $dns_a6,
     $dns_srv,
-    $dns_naptr
+    $dns_naptr,
+    $dns_mx
 ];
 
 // 配列を定義する
@@ -90,6 +94,9 @@ $d = [];
 
 // ドメイン情報を載せる
 $d["domain"] = $domain;
+
+// IPアドレス情報を載せる
+$d["ip"] = gethostbyname($domain);
 
 // $dnsの数だけ繰り返す
 for ($i=0; $i < count($dns); $i++) { 
