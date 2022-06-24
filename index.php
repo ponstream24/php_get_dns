@@ -76,6 +76,7 @@ $dns_naptr = dns_get_record($domain, DNS_NAPTR);
 // DNSをまとめる
 $dns = [
     $dns_a,
+    $dns_mx,
     $dns_cname,
     $dns_ns,
     $dns_ptr,
@@ -86,8 +87,7 @@ $dns = [
     $dns_aaaa,
     $dns_a6,
     $dns_srv,
-    $dns_naptr,
-    $dns_mx
+    $dns_naptr
 ];
 
 // 配列を定義する
